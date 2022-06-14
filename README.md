@@ -3,7 +3,7 @@
 Dieses Repository wurde für die Messung der Laufzeit und Speicherplatzbelegung von Operationen auf ausgewählten Datenstrukturen in SICStus Prolog verwendet.
 Die verwendeten Daten werden teilweise mit dem generate/2 Prädikat aus dem SICStus Prolog Fuzzer von J. Schmidt erstellt.(https://github.com/Joshua27/SICStusPrologFuzzer)
 
-##Operationen
+## Operationen
 Die zu evaluierenden Operationen sind insert,get,update und remove. In den gleichnamigen Dateien befinden sich folgende Prozeduren, um abhängig der verwendeten Datenstruktur die richtigen Prädikate in der Datei datastructure.pl aufzurufen.
 	- **insert(Datastructuretype,Measurement,Keys,Values,Result).**
 	Ruft die durch 'Measurement' bestimmte Messung auf und übergibt den Aufruf der für die Datenstruktur passenden Prozedur mit den einzufügenden Keys und Values. Das Ergebnis der Messung wird in 'Result' zurückgegeben.
@@ -16,11 +16,11 @@ Die zu evaluierenden Operationen sind insert,get,update und remove. In den gleic
 	- **remove(Datastructuretype,Measurement,Keys,Datastructure,Result).**
 	Ruft die durch 'Measurement' bestimmte Messung auf und übergibt den Aufruf der für die Datenstruktur passenden Prozedur für das Entfernen der 'Keys' in der befüllten Datenstruktur 'Datastructure'. Das Ergebnis der Messung wird in 'Result' zurückgegeben.
 
-##Datenstrukturen
+## Datenstrukturen
 Die zu evaluierende Datenstrukturen sind Assert, BB, Assoc, Avl, Mutdict, Logarr und das Mutarray.
 Assert wurde angepasst, sodass ebenfalls Schlüssel-Wert-Paare eingefügt werden. Die Implementierungen befinden sich in der Datei datastructures.pl. Dort ist ebenfalls die Prozedur clean definiert. Diese dient dem manuellen Aufruf des Garbage Collectors oder dem Reinigen der Datenbasis von auf das Blackboard oder mittels assert eingefügten Daten. Die in datastructure.pl definierten Prozeduren werden aus der Datei timeAndStorage.pl heraus aufgerufen, um die Messung der Zeit und der Speicherbelegung direkt vor den Operationen starten zu können.
 
-##Datentypen
+## Datentypen
 Die verwendeten Datentypen sind:
 	- ordIdx: Durchgehend aufsteigende Integer-Werte zwischen 1 bis N.
 	- revIdx: Durchgehend absteigende Integer-Werte zwishen N bis 1.
@@ -36,7 +36,7 @@ Die Datentypen wurden in der Datei datagenerator.pl definiert. Es gibt zudem die
 	- last: Die letzten N Elemente werden umgekehrt in einer Liste ausgegeben.
 	- random: Die Elemente einer Liste werden gemischt und von diesen die ersten N ausgewählt und in einer Liste ausgegeben.
 	
-##Measurements
+## Measurements
 
 In der Datei timeAndStorage.pl wurden die verschiedenen möglichen Messungen definiert.Mögliche Parameter sind
 	- time: misst die Laufzeit einer Prozedur
@@ -45,7 +45,7 @@ In der Datei timeAndStorage.pl wurden die verschiedenen möglichen Messungen def
 	- garbage: Misst den Unterschied der Anzahl der GC-Aufrufe, des befreiten Speichers und der für GC aufgewendeten zeit vor und nach dem Ausführen einer Prozedur.
 	- Identisch verhalten sich die Parameter global_stack_used,local_stack_used,trail_used und choice_used
 	
-##Statistiken
+## Statistiken
 
 In der Datei statistics.pl wurden Prozeduren definiert, um statistische Daten zu erhalten. So ist es möglich, das geometrische Mittel von Elementen einer Liste und das Konfidenzintervall zu berechnen.
 
