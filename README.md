@@ -5,15 +5,15 @@ Die verwendeten Daten werden teilweise mit dem generate/2 Prädikat aus dem SICS
 
 ## Operationen
 Die zu evaluierenden Operationen sind insert,get,update und remove. In den gleichnamigen Dateien befinden sich folgende Prozeduren, um abhängig der verwendeten Datenstruktur die richtigen Prädikate in der Datei datastructure.pl aufzurufen.
-- **insert(Datastructuretype,Measurement,Keys,Values,Result).**
+- **insert(Datastructuretype,Measurement,Keys,Values,Result).**  
 	Ruft die durch 'Measurement' bestimmte Messung auf und übergibt den Aufruf der für die Datenstruktur passenden Prozedur mit den einzufügenden Keys und Values. Das Ergebnis der Messung wird in 'Result' zurückgegeben.
-- **insertBack(Datastructuretype,Keys,Values,Back).**
+- **insertBack(Datastructuretype,Keys,Values,Back).**  
 	Fügt Datenpaare bestehend aus den Einträgen in 'Keys' und 'Values' in die durch 'Datastructuretype' definierte Datenstruktur ein und gibt diese in Back zurück.
-- **get(Datastructuretype,Measurement,Keys,Datastructure, Result, Back).**
+- **get(Datastructuretype,Measurement,Keys,Datastructure, Result, Back).**  
 	Ruft die durch 'Measurement' bestimmte Messung auf und übergibt den Aufruf der für die Datenstruktur passenden Prozedur für das Unifizieren der 'Keys' mit den Daten in der befüllten Datenstruktur 'Datastructure'. Das Ergebnis der Messung wird in 'Result' zurückgegeben.
-- **update(Datastructuretype, Measurement,Keys,Values,Datastructure, Result).**
+- **update(Datastructuretype, Measurement,Keys,Values,Datastructure, Result).**  
 	Ruft die durch 'Measurement' bestimmte Messung auf und übergibt den Aufruf der für die Datenstruktur passenden Prozedur für das Updaten der 'Values' der 'Keys' in der befüllten Datenstruktur 'Datastructure'. Das Ergebnis der Messung wird in 'Result' zurückgegeben.
-- **remove(Datastructuretype,Measurement,Keys,Datastructure,Result).**
+- **remove(Datastructuretype,Measurement,Keys,Datastructure,Result).**  
 	Ruft die durch 'Measurement' bestimmte Messung auf und übergibt den Aufruf der für die Datenstruktur passenden Prozedur für das Entfernen der 'Keys' in der befüllten Datenstruktur 'Datastructure'. Das Ergebnis der Messung wird in 'Result' zurückgegeben.
 
 ## Datenstrukturen
